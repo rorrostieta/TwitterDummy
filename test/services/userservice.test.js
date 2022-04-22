@@ -21,10 +21,21 @@ describe('Test for userservice', () =>{
     expect(userInfoList[3]).toBe('Sin Bio')
   })
 
-  //Requirement #3 Test
+  // Requirement #3 Test
   test('3) Update username', () =>{
     const user = userservice.create(100, 'rorrostieta', 'ruben')
     userservice.updateUserUsername(user, 'ateitsorro')
     expect(user.username).toBe('ateitsorro')
+  })
+
+  // Requirement #4 Test
+  test('4) Given a list of users give me the list of usernames', () =>{
+    const user1 = userservice.create(100, 'rorrostieta1', 'ruben')
+    const user2 = userservice.create(100, 'rorrostieta2', 'ruben')
+    const user3 = userservice.create(100, 'rorrostieta3', 'ruben')
+    const usernames = userservice.getAllUsernames([user1, user2, user3])
+    expect(usernames).toContain('rorrostieta1')
+    expect(usernames).toContain('rorrostieta2')
+    expect(usernames).toContain('rorrostieta3')
   })
 })
