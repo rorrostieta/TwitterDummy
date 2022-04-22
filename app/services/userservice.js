@@ -12,7 +12,9 @@ class userservice {
   }
 
   // Requirement #3
-
+  static updateUserUsername(user, newUsername){
+    return user.username = newUsername
+  }
 }
 
 module.exports = userservice
