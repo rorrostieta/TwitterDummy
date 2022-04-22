@@ -22,4 +22,9 @@ describe('Test for userservice', () =>{
   })
 
   //Requirement #3 Test
+  test('3) Update username', () =>{
+    const user = userservice.create(100, 'rorrostieta', 'ruben')
+    userservice.updateUserUsername(user, 'ateitsorro')
+    expect(user.username).toBe('ateitsorro')
+  })
 })
