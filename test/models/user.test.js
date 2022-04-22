@@ -14,5 +14,13 @@ describe('Unit test for Twitter User', () =>{
     expect(User.bio).toBe('Bio')
     expect(User.dateCreated).not.toBeUndefined()
     expect(User.lastUpdate).not.toBeUndefined()
+  })
+  test('2. Adding getters', () =>{
+    const User = new user(100, 'rorrostieta', 'ruben', 'Bio')
+
+    expect(User.getUsername).toBe('rorrostieta')
+    expect(User.getBio).toBe('Bio')
+    expect(User.getDateCreated).not.toBeUndefined()
+    expect(User.getLastUpdated).not.toBeUndefined()
   });
 })
