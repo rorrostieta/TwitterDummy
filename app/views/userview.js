@@ -9,7 +9,7 @@ class userview{
       return {error: 'Error - El payload no existe'}
     }
 
-    // Requirement #2
+    // Requirement #2 & 3
     else if (typeof payload.username != 'string' || typeof payload.name != 'string' || typeof payload.id != 'number') {
       console.log('Error en attributos')
       return {error: 'Los attributos necesitan tener un valor valido'}
