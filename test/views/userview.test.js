@@ -9,4 +9,11 @@ describe('Tests for userview', () => {
     // https://jestjs.io/docs/using-matchers#strings
     expect(result.error).toMatch(/payload no existe/)
   });
+
+  // Requirement 2
+  test("Return an object when try to create a new user with a payload with invalid properties", () => {
+    const payload = {username: null, name: 12, id: 'id'}
+    const result = userview.createUser(payload)
+    expect(result.error).toMatch(/necesitan tener un valor valido/)
+  });
 });
