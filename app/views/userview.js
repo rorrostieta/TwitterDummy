@@ -14,6 +14,12 @@ class userview{
       console.log('Error en attributos')
       return {error: 'Los attributos necesitan tener un valor valido'}
     }
+    else {
+      console.log('Everything ok')
+      return {name:payload.name, username:payload.username, id:payload.id}
+    } {
+
+    }
   }
 }
 
